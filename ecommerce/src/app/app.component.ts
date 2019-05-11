@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ecommerce';
+  selection: string = "Recipe";
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+  onNavigate(input: string){
+    this.selection=input;
+    console.log('iii'+input);
+  }
 }
