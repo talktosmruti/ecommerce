@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Recipe } from '../recipe.model';
+import { DropdownOpenerDirective } from 'src/app/shared/dropdown-opener.directive';
 
 @Component({
   selector: 'app-recipe-detail',
@@ -9,7 +10,9 @@ import { Recipe } from '../recipe.model';
 export class RecipeDetailComponent implements OnInit {
 
   @Input()selectedItem: Recipe;
-  constructor() { }
+  constructor() { 
+
+  }
 
   ngOnInit() {
   }
