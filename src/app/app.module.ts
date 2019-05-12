@@ -13,6 +13,7 @@ import { ShoppingListEditComponent } from './shopping-list/shopping-list-edit/sh
 import { HeaderComponent } from './header/header.component';
 import { DropdownOpenerDirective } from './shared/dropdown-opener.directive';
 
+
 @NgModule({
   declarations: [
     AppComponent,
