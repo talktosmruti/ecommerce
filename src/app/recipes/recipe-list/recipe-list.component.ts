@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Recipe } from '../recipe.model';
 
 @Component({
@@ -9,6 +9,8 @@ import { Recipe } from '../recipe.model';
 export class RecipeListComponent implements OnInit {
 
   recipes: Recipe[] = [];
+  @Output()item = new EventEmitter<Recipe>();
+
   constructor() { }
 
   ngOnInit() {
@@ -17,6 +19,11 @@ export class RecipeListComponent implements OnInit {
     'https://media2.s-nbcnews.com/j/newscms/2018_35/1363730/rachel-hollis-chicken-fingers-today-main-180828_b9b2a726ec8654e3f9f7435ce26588fb.today-inline-large.jpg'));
     this.recipes.push(new Recipe('Recipe-2','this recipe is average',
     'https://www.bbcgoodfood.com/sites/default/files/recipe-collections/collection-image/2016/06/prawn-laksa-curry-bowl.jpg'));
+  }
+
+  emitSelectedItem(recipe:Recipe){
+    console.log('inside list ts recipe name '+recipe.name);
+    this.item.emit(recipe);
   }
 
 }

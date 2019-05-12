@@ -16,6 +16,5 @@ export class AppComponent {
 
   onNavigate(input: string){
     this.selection=input;
-    console.log('iii'+input);
   }
 }
