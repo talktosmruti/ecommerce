@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-xs-12">
-    <img src="" alt="" class="img-responsive">
+    <img [src]="selectedItem.imagepath" alt="selectedItem.name" class="img-responsive" style="max-height: 500px">
   </div>
 </div>
 <div class="row">
@@ -29,6 +29,6 @@
 </div>
 <div class="row">
     <div class="col-xs-12">
-      Description
+      {{selectedItem.description}}
     </div>
 </div>

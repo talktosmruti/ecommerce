@@ -17,6 +17,7 @@ export class RecipesComponent implements OnInit {
   }
 
   captureSelectedItem(recipe:Recipe){
+    console.log("inside recipes recived :"+recipe.name);
     this.selectedItem =recipe;
   }
 
