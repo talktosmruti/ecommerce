@@ -10,15 +10,20 @@ import { ShoppingService } from './shopping.service';
 })
 export class ShoppingListComponent implements OnInit {
   ingredients : Ingredient[]= [
-    new Ingredient('Aplle', 5),
-    new Ingredient('Condoms',10)
+    
   ]
-  constructor() { }
+  constructor(private shopingService: ShoppingService) { }
 
   ngOnInit() {
+    this.ingredients = this.shopingService.getIngredeients()
+    this.onIngredientAddition();
   }
 
-  onIngredientAddition(ingred: Ingredient){
-    this.ingredients.push(ingred);
+  onIngredientAddition(){
+    this.shopingService.ingredient.subscribe(
+      (data: Ingredient) => {
+        this.ingredients.push(data);
+      }
+    );
   }
 }
