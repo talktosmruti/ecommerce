@@ -13,9 +13,4 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSlected(selector:string){
-    console.log('on click data :'+selector);
-    this.feature.emit(selector);
-  }
-
 }

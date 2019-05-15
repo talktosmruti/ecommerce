@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light navbar navbar-dark bg-dark">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a href="#" class="navbar-brand mb-0 h1">Recipe Book</a>
+      <a style="cursor:pointer;" class="navbar-brand mb-0 h1">Recipe Book</a>
     </div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -9,10 +9,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#" (click)="onSlected('Recipe')">Recipes <span class="sr-only">(current)</span></a>
+            <a class="nav-link" routerLink = "recipes" routerLinkActivate="activate">Recipes <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#" (click)="onSlected('Shopping')">Shopping List</a>
+            <a class="nav-link" routerLink = "shopping" routerLinkActivate="activate">Shopping List</a>
           </li>
         </ul>
           <div class="nav-item dropdown dropdown-menu-right text-right">
@@ -20,11 +20,11 @@
                 Manage
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Save Data</a>
+              <a class="dropdown-item" style="cursor:pointer;">Save Data</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Fecth Data</a>
+              <a class="dropdown-item" style="cursor:pointer;">Fecth Data</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Laura Data</a>
+              <a class="dropdown-item" style="cursor:pointer;">Laura Data</a>
             </div>
           </div>
     </div>

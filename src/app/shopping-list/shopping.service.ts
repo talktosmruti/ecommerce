@@ -11,7 +11,7 @@ export class ShoppingService {
     new Ingredient('Condoms',10)
   ]
 
-  ingredientsChanged = new EventEmitter<Ingredient[]>();
+  @Output()ingredientsChanged = new EventEmitter<Ingredient[]>();
   constructor() {
    }
 
@@ -33,7 +33,7 @@ export class ShoppingService {
       this.ingredients.push(i);
       console.log('at shopping service name '+i.name);
     }
-    
+    console.log('inside recieveIngredsFromRecipe ...getIngredeients response'+this.getIngredeients().length);
     this.ingredientsChanged.emit(this.ingredients.slice());
   }
 }

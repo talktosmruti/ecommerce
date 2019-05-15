@@ -1,7 +1,10 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<app-header (feature)="onNavigate($event)"></app-header>
+<app-header></app-header>
 <div class="main-div">
-  <app-recipes *ngIf="selection==='Recipe'"></app-recipes>
-  <app-shopping-list *ngIf="selection!=='Recipe'"></app-shopping-list>
+
+  <router-outlet>
+    <!-- <app-recipes></app-recipes>
+    <app-shopping-list></app-shopping-list> -->
+  </router-outlet>
 </div>
-<router-outlet></router-outlet>
+
