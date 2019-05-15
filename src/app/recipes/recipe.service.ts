@@ -53,6 +53,10 @@ export class RecipeService {
     return this.recipes.slice();
   }
 
+  getRecipesById(id: string){
+    return this.recipes.slice()[id];
+  }
+
   sendIngredientsToShoppingList(ingreds : Ingredient[]){
     this.shopService.recieveIngredsFromRecipe(ingreds);
   }
